@@ -1,1 +1,1 @@
-sudo pacman -S zellij
+sudo pacman -S zellij # yay -S zellij
