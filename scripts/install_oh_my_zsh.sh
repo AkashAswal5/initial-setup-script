@@ -9,4 +9,20 @@ else
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
+# install plugins
+# zsh-autosuggestion
+
+if [ -d "$ZSH_CUSTOM/plugins/zsh-autosuggestion" ]; then
+  echo "zsh-autosuggestion already install"
+else
+  git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+fi
+
+# syntax-highlighting
+if [ -d $ZSH_ZUSTOM/plugins/zsh-syntax-highlighting ]; then
+  echo "zsh-syntax-highlighting already install"
+else
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+fi 
+
 
