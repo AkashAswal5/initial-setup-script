@@ -17,11 +17,6 @@ cd "$CURR_DIR"
 source "./install-oh-my-zsh.sh"
 
 cd "$CURR_DIR"
-echo "Installing NVIM with Runat's config"
-source "./install-nvim.sh"
-
-cd "$CURR_DIR"
 source "./install-aerospace.sh"
 
-echo "Almost everything RunAt uses is installed and configured."
 figlet -c 'DONE'

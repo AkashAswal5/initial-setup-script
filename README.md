@@ -10,7 +10,7 @@ It installs the following:
 Currently you'd have to go through this tedious process
 ```bash
 # Clone my repo SIUUUU
-git clone -b tek_macos https://github.com/akashaswal5/initial-setup-script.git ~/init-setup
+git clone -b tek_macos https://github.com/akashaswal5/initial-setup-script.git ~/initial-setup-script/
 # Get innnnnnn
 cd ~/init-setup
 # Run the master script
