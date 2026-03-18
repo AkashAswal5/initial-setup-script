@@ -4,6 +4,7 @@ It installs the following:
 - Packages in './curr.conf'
 - Dotfiles from [here](https://github.com/akashaswal5/dotfiles/tree/tek_macos)
 - oh-my-zsh with plugins
+- My [NVIM config](https://github.com/AkashAswal5/nvim.git)
 - Aerospace (Window Manager)
 
 ## How to use
