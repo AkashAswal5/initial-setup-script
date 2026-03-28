@@ -20,3 +20,11 @@ if [ -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ]; then
 else
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 fi
+
+if [ -d "$ZSH_CUSTOM/plugins/zsh-autocomplete" ]; then
+    echo "zsh-syntax-highlighting already installed"
+else
+    git clone https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete   
+fi
+
+
