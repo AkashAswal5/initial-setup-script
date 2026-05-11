@@ -13,7 +13,7 @@ Currently you'd have to go through this tedious process
 # Clone my repo SIUUUU
 git clone -b tek_macos https://github.com/akashaswal5/initial-setup-script.git ~/initial-setup-script/
 # Get innnnnnn
-cd ~/init-setup
+# cd ~/init-setup
 # Run the master script
 ./install-all.sh
 ```
