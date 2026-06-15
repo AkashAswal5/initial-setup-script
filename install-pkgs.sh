@@ -28,3 +28,14 @@ echo "Installing OTHERS"
 install_pkgs "${OTHERS[@]}"
 echo "$DASH_LINE"
 
+echo "Installing GITHUB_SAFETY"
+install_pkgs "${GITHUB_SAFETY[@]}"
+echo "$DASH_LINE"
+
+echo "Installing CYBER_RECON"
+install_pkgs "${CYBER_RECON[@]}"
+echo "$DASH_LINE"
+
+# more here
+
+

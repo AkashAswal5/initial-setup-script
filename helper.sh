@@ -1,8 +1,5 @@
 #!/bin/bash
 
-export CODING_REPO="$HOME/MySpace/coding"
-export PERSONAL_REPO="$HOME/MySpace/personal"
-export DASH_LINE="--------------------------------"
 
 is_installed() {
     brew list "$1"
