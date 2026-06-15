@@ -34,19 +34,12 @@ for repo_name in "${repos[@]}"; do
 
 	echo -e "\n checking repo: $repo_name"
 
-	# check if repo exists on github
-	if git ls-remote "$repo_url" >/dev/null 2>&1; then
-		echo "repo exists on github"
-
 		# if repo already exist
-		if [ -d "$target_path/.git" ]; then
-			echo "repo $repo_name already exists, pulling latest changes"
-			git -C "$target_path" pull
-		else
-			echo "cloning from $repo_url ........"
-			git clone "$repo_url" "$target_path"
-		fi
+	if [ -d "$target_path/.git" ]; then
+		echo "repo $repo_name already exists, pulling latest changes"
+		git -C "$target_path" pull
 	else
-		echo "repo $repo_name does not exist on github, skipping..."
+		echo "cloning from $repo_url ........"
+		git clone "$repo_url" "$target_path"
 	fi
 done
