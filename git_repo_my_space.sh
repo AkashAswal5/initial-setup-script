@@ -20,6 +20,7 @@ repos=(
 	"weekly_report"
 	"wallpapers"
 	"devops_repo_script"
+	"Bug-Bounty"
 )
 
 # check condition if base_dir exist or not
