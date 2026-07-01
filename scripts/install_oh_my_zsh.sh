@@ -25,4 +25,9 @@ else
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 fi 
 
-
+# zsh-autocomplete 
+if [ -d "$ZSH_CUSTOM/plugins/zsh-autocomplete" ]; then
+  echo "zsh-autocomplete already installed"
+else
+  git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git "$ZSH_CUSTOM/plugins/zsh-autocomplete"
+fi
