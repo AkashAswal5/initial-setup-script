@@ -18,8 +18,10 @@ install_pkgs() {
   done
 
   if [ ${#to_install[@]} -ne 0 ]; then
-    echo "Installing ${packages[*]}"
-    brew install "${to_install[@]}"
+    echo "Installing ${to_install[*]}"
+    for pkg in "${to_install[@]}"; do
+      brew install "$pkg" || echo "WARNING: could not install '$pkg' (not in brew?), skipping"
+    done
   fi
 }
 

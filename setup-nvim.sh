@@ -9,6 +9,3 @@ if [ -d "$NVIM_CFG" ]; then
 fi
 
 git clone -b tek_macos "$GHUB_REPO" "$NVIM_CFG"
-cd "$NVIM_CFG"
-
-git checkout tek_macos

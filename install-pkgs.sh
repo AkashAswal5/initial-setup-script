@@ -36,6 +36,48 @@ echo "Installing CYBER_RECON"
 install_pkgs "${CYBER_RECON[@]}"
 echo "$DASH_LINE"
 
-# more here
+echo "Installing WEB_ENUM"
+install_pkgs "${WEB_ENUM[@]}"
+echo "$DASH_LINE"
+
+echo "Installing VULN_SCANNING"
+install_pkgs "${VULN_SCANNING[@]}"
+echo "$DASH_LINE"
+
+echo "Installing PRIV_ESC"
+install_pkgs "${PRIV_ESC[@]}"
+echo "$DASH_LINE"
+
+echo "Installing ACTIVE_DIRECTORY"
+install_pkgs "${ACTIVE_DIRECTORY[@]}"
+echo "$DASH_LINE"
+
+echo "Installing PASSWORD_ATTACKS"
+install_pkgs "${PASSWORD_ATTACKS[@]}"
+echo "$DASH_LINE"
+
+echo "Installing WIRELESS"
+install_pkgs "${WIRELESS[@]}"
+echo "$DASH_LINE"
+
+echo "Installing CONTAINERS"
+install_pkgs "${CONTAINERS[@]}"
+echo "$DASH_LINE"
+
+echo "Installing CLOUD_SECURITY"
+install_pkgs "${CLOUD_SECURITY[@]}"
+echo "$DASH_LINE"
+
+echo "Installing FORENSICS"
+install_pkgs "${FORENSICS[@]}"
+echo "$DASH_LINE"
+
+echo "Installing REVERSE_ENGINEERING"
+install_pkgs "${REVERSE_ENGINEERING[@]}"
+echo "$DASH_LINE"
+
+echo "Installing OSINT"
+install_pkgs "${OSINT[@]}"
+echo "$DASH_LINE"
 
 

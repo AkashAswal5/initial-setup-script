@@ -18,7 +18,7 @@ cd ~
 if [ -d "$REPO_NAME" ]; then
   echo "Repository '$REPO_NAME' already exists. Skipping clone"
 else
-  git clone "$REPO_URL"
+  git clone -b "$BRANCH_NAME" "$REPO_URL"
 fi
 
 # Check if the clone was successful
@@ -33,7 +33,7 @@ if [ $? -eq 0 ]; then
   rm -rf ~/.config/zellij
   rm -rf ~/.config/yazi
   rm -rf ~/.zshrc
-  rm ~/.gitconfig
+  rm -f ~/.gitconfig
 
   echo "Installing the files again"
   stow kitty

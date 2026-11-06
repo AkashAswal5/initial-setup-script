@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ZSH_CUSTOM="$HOME/.oh-my-zsh"
+ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 if [ -d "$ZSH_CUSTOM" ]; then
     echo "oh-my-zsh Already Installed"
 else
