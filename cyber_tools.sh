@@ -1,7 +1,0 @@
-#!/bin/bash
-
-
-hascat
-
-
-jwtool

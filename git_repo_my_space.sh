@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-base_dir=$home/my-space/
+base_dir="$HOME/my-space/"
 git_org="akashaswal5"
 git_host="github.com"
 

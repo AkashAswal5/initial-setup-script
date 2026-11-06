@@ -10,11 +10,15 @@ cd "$CURR_DIR"
 source "./install-pkgs.sh"
 
 cd "$CURR_DIR"
+# oh-my-zsh first: its installer overwrites ~/.zshrc, so it must run before stowing ours
+source "./install-oh-my-zsh.sh"
+
+cd "$CURR_DIR"
 echo "Installing dotfiles"
 source "./install-dotfiles.sh"
 
 cd "$CURR_DIR"
-source "./install-oh-my-zsh.sh"
+source "./setup-nvim.sh"
 
 cd "$CURR_DIR"
 source "./install-aerospace.sh"

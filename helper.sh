@@ -1,5 +1,6 @@
 #!/bin/bash
 
+DASH_LINE="------------------------------------------------"
 
 is_installed() {
     brew list "$1"

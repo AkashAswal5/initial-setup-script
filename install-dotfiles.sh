@@ -31,6 +31,7 @@ if [ $? -eq 0 ]; then
   rm -rf ~/.config/kitty
   rm -rf ~/.config/mpv
   rm -rf ~/.config/zellij
+  rm -rf ~/.config/yazi
   rm -rf ~/.zshrc
   rm ~/.gitconfig
 
@@ -38,6 +39,7 @@ if [ $? -eq 0 ]; then
   stow kitty
   stow mpv
   stow zellij
+  stow yazi
   stow zsh
   stow gitconfig
 else
