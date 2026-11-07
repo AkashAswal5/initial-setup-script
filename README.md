@@ -11,11 +11,11 @@ It installs the following:
 ## How to use
 One command:
 ```bash
-git clone -b tek_macos https://github.com/akashaswal5/initial-setup-script.git ~/initial-setup-script && ~/initial-setup-script/install-all.sh
+git clone -b tek_macos https://github.com/AkashAswal5/initial-setup-script.git ~/initial-setup-script && ~/initial-setup-script/install-all.sh
 ```
 Or step by step:
 ```bash
-git clone -b tek_macos https://github.com/akashaswal5/initial-setup-script.git ~/initial-setup-script/
+git clone -b tek_macos https://github.com/AkashAswal5/initial-setup-script.git ~/initial-setup-script/
 cd ~/initial-setup-script
 ./install-all.sh
 # or run any individual script: install-brew.sh, install-pkgs.sh, install-oh-my-zsh.sh,
