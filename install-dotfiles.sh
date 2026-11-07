@@ -27,13 +27,13 @@ if [ $? -eq 0 ]; then
   git checkout "$BRANCH_NAME"
 
   # WARNING: Only delete and stow those programs which you know exist in your ~/dotfiles
-  echo "removing old configs"
-  rm -rf ~/.config/kitty
-  rm -rf ~/.config/mpv
-  rm -rf ~/.config/zellij
-  rm -rf ~/.config/yazi
-  rm -rf ~/.zshrc
-  rm -f ~/.gitconfig
+  echo "Backing up old configs"
+  BACKUP_DIR="$HOME/.dotfiles-backup.$(date +%Y%m%d%H%M%S)"
+  mkdir -p "$BACKUP_DIR"
+  for old in ~/.config/kitty ~/.config/mpv ~/.config/zellij ~/.config/yazi ~/.zshrc ~/.gitconfig; do
+    [ -e "$old" ] && mv "$old" "$BACKUP_DIR/"
+  done
+  echo "Old configs backed up to $BACKUP_DIR"
 
   echo "Installing the files again"
   stow kitty
