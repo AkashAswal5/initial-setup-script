@@ -1,7 +1,8 @@
 #!/bin/bash
 
-source ./curr.conf
-source ./helper.sh
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/curr.conf"
+source "$SCRIPT_DIR/helper.sh"
 
 echo "$DASH_LINE"
 

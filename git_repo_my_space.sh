@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 base_dir="$HOME/my-space/"
 git_org="akashaswal5"
@@ -37,9 +36,9 @@ for repo_name in "${repos[@]}"; do
 		# if repo already exist
 	if [ -d "$target_path/.git" ]; then
 		echo "repo $repo_name already exists, pulling latest changes"
-		git -C "$target_path" pull
+		git -C "$target_path" pull || echo "WARNING: pull failed for $repo_name, skipping"
 	else
 		echo "cloning from $repo_url ........"
-		git clone "$repo_url" "$target_path"
+		git clone "$repo_url" "$target_path" || echo "WARNING: clone failed for $repo_name, skipping"
 	fi
 done

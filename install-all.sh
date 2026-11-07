@@ -1,26 +1,31 @@
 #!/bin/bash
 
-CURR_DIR="$(pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Check if homebrew is installed or not
-source "./install-brew.sh"
+run_step() {
+  echo "==> Running $1"
+  bash "$SCRIPT_DIR/$1" || { echo "FAILED at step: $1"; exit 1; }
+}
 
-# Install all the packages in ./curr.conf
-cd "$CURR_DIR"
-source "./install-pkgs.sh"
+# Homebrew (if not installed)
+run_step install-brew.sh
 
-cd "$CURR_DIR"
-# oh-my-zsh first: its installer overwrites ~/.zshrc, so it must run before stowing ours
-source "./install-oh-my-zsh.sh"
+# All packages from curr.conf
+run_step install-pkgs.sh
 
-cd "$CURR_DIR"
-echo "Installing dotfiles"
-source "./install-dotfiles.sh"
+# oh-my-zsh + plugins (must run before dotfiles: installer writes its own .zshrc)
+run_step install-oh-my-zsh.sh
 
-cd "$CURR_DIR"
-source "./setup-nvim.sh"
+# Dotfiles via stow (kitty, mpv, zellij, yazi, zsh, gitconfig)
+run_step install-dotfiles.sh
 
-cd "$CURR_DIR"
-source "./install-aerospace.sh"
+# NVIM config
+run_step setup-nvim.sh
+
+# Aerospace window manager
+run_step install-aerospace.sh
+
+# my-space repos
+run_step git_repo_my_space.sh
 
 figlet -c 'DONE'

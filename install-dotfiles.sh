@@ -1,8 +1,8 @@
 #!/bin/bash
 
-source "./helper.sh"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/helper.sh"
 
-ORIGINAL_DIR=$(pwd)
 REPO_URL="https://github.com/AkashAswal5/dotfiles"
 REPO_NAME="dotfiles"
 BRANCH_NAME="tek_macos"
